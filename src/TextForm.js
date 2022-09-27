@@ -36,10 +36,10 @@ export default function TextForm(props) {
           rows="7"
         ></textarea>
       </div>
-      <button className="btn btn-primary mx-1 my-1" onClick={HandleUpClick}>Change to UpperCase</button>
-      <button className="btn btn-primary mx-1 my-1" onClick={HandleLwClick}>Change to LowerCase</button>
-      <button className="btn btn-primary mx-1 my-1" onClick={HandleClClick}>Clear Text</button>
-      <button type="button" className="btn btn-warning" onClick={handleCopy}>Copy Text</button>
+      <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={HandleUpClick}>Change to UpperCase</button>
+      <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={HandleLwClick}>Change to LowerCase</button>
+      <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={HandleClClick}>Clear Text</button>
+      <button disabled={text.length===0} type="button" className="btn btn-warning" onClick={handleCopy}>Copy Text</button>
     </div>
     <div className="container my-3" style={props.myStyle}>
       <h1>Your Text Summary</h1>
