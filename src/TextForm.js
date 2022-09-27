@@ -36,15 +36,15 @@ export default function TextForm(props) {
           rows="7"
         ></textarea>
       </div>
-      <button className="btn btn-primary mx-1" onClick={HandleUpClick}>Change to UpperCase</button>
-      <button className="btn btn-primary mx-1" onClick={HandleLwClick}>Change to LowerCase</button>
-      <button className="btn btn-primary mx-1" onClick={HandleClClick}>Clear Text</button>
+      <button className="btn btn-primary mx-1 my-1" onClick={HandleUpClick}>Change to UpperCase</button>
+      <button className="btn btn-primary mx-1 my-1" onClick={HandleLwClick}>Change to LowerCase</button>
+      <button className="btn btn-primary mx-1 my-1" onClick={HandleClClick}>Clear Text</button>
       <button type="button" className="btn btn-warning" onClick={handleCopy}>Copy Text</button>
     </div>
     <div className="container my-3" style={props.myStyle}>
       <h1>Your Text Summary</h1>
       <p>{(text.split(" ").filter((element)=>{
-      return element.length!==0}).length)-1} words and {text.length} characters</p>
+      return element.length!==0}).length)} words and {text.length} characters</p>
       <p>{0.008 * text.split(" ").length} Minutes to read</p>
     </div>
     </>
